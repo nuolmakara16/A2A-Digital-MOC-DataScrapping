@@ -69,7 +69,7 @@ for page_num in range(1):
 
 row_num = 0
 
-with xlsxwriter.Workbook('./outputs/results.xlsx') as workbook:
+with xlsxwriter.Workbook('../output.xlsx') as workbook:
     worksheet = workbook.add_worksheet()
     worksheet.write_row(row_num, 0, ['No', 'Company Name', 'Name', 'Headline'])
 

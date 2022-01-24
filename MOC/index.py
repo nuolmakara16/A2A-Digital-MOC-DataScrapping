@@ -70,6 +70,8 @@ stop_at = 3
 
 hasData = True
 delay = 20
+
+# %.8d % i will convert number to 8 digit number
 data = ["%.8d" % i for i in range(start_at, stop_at)]
 
 outWorkbook = xlsxwriter.Workbook(f"outputs/{start_at}-{stop_at}.xlsx")
