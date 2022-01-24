@@ -64,13 +64,15 @@ list_chairman_of_the_board_of_directors = []
 # list of company id from json file
 company_ids = []
 
-start_at = 65000
-stop_at = 70000
+# Start and Ending number for the program to run
+start_at = 0
+stop_at = 3
+
 hasData = True
 delay = 20
 data = ["%.8d" % i for i in range(start_at, stop_at)]
 
-outWorkbook = xlsxwriter.Workbook(f"output/{start_at}-{stop_at}.xlsx")
+outWorkbook = xlsxwriter.Workbook(f"outputs/{start_at}-{stop_at}.xlsx")
 outSheet = outWorkbook.add_worksheet()
 
 driver = webdriver.Chrome('../drivers/chromedriver.exe')
