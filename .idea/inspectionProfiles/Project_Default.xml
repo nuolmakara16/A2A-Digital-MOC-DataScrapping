@@ -1,14 +1,23 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
-    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="PyNoneFunctionAssignmentInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <inspection_tool class="PyClassHasNoInitInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
       <option name="ignoredPackages">
         <value>
-          <list size="2">
-            <item index="0" class="java.lang.String" itemvalue="jupyter" />
-            <item index="1" class="java.lang.String" itemvalue="jupyter-console" />
+          <list size="12">
+            <item index="0" class="java.lang.String" itemvalue="pywhatkit" />
+            <item index="1" class="java.lang.String" itemvalue="pyjokes" />
+            <item index="2" class="java.lang.String" itemvalue="pyttsx3" />
+            <item index="3" class="java.lang.String" itemvalue="wikipedia" />
+            <item index="4" class="java.lang.String" itemvalue="SpeechRecognition" />
+            <item index="5" class="java.lang.String" itemvalue="wincertstore" />
+            <item index="6" class="java.lang.String" itemvalue="pipwin" />
+            <item index="7" class="java.lang.String" itemvalue="face_recognition" />
+            <item index="8" class="java.lang.String" itemvalue="opencv-python" />
+            <item index="9" class="java.lang.String" itemvalue="dlib" />
+            <item index="10" class="java.lang.String" itemvalue="cmake" />
+            <item index="11" class="java.lang.String" itemvalue="pygame" />
           </list>
         </value>
       </option>
@@ -16,23 +25,36 @@
     <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoredErrors">
         <list>
-          <option value="W292" />
           <option value="E722" />
-          <option value="E501" />
+          <option value="W605" />
+          <option value="E701" />
           <option value="E302" />
           <option value="E305" />
+          <option value="E501" />
         </list>
       </option>
     </inspection_tool>
-    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+    <inspection_tool class="PyPep8NamingInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false">
       <option name="ignoredErrors">
         <list>
-          <option value="N802" />
           <option value="N806" />
+          <option value="N803" />
+          <option value="N802" />
+          <option value="N801" />
         </list>
       </option>
     </inspection_tool>
+    <inspection_tool class="PyProtectedMemberInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="PyShadowingNamesInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="os._exit" />
+          <option value="object.__getitem__" />
+          <option value="docx.Document" />
+        </list>
+      </option>
+    </inspection_tool>
     <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
       <option name="processCode" value="true" />
       <option name="processLiterals" value="true" />

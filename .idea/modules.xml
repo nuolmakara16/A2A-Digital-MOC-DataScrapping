@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/A2A_Data_Scraping.iml" filepath="$PROJECT_DIR$/.idea/A2A_Data_Scraping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/A2A-Digital-MOC-DataScrapping.iml" filepath="$PROJECT_DIR$/.idea/A2A-Digital-MOC-DataScrapping.iml" />
     </modules>
   </component>
 </project>
