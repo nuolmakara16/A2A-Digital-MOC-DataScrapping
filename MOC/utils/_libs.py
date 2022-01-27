@@ -86,13 +86,11 @@ data = ["%.8d" % i for i in range(START_ID_AT, STOP_ID_AT)]
 outWorkbook = xlsxwriter.Workbook(f"outputs/{START_ID_AT}-{STOP_ID_AT}.xlsx")
 outSheet = outWorkbook.add_worksheet()
 
-
-
 def check_element(value):
     return value if value else " "
 
 
-def Go_To_Search_Page(start_loop):
+def Go_To_Search_Page(driver, start_loop):
     try:
         driver.get("https://www.businessregistration.moc.gov.kh/")
         driver.maximize_window()
@@ -133,7 +131,7 @@ def run():
         start_loop = time.time()
         identification_number = data[index]
         if hasData:
-            Go_To_Search_Page(start_loop)
+            Go_To_Search_Page(driver=driver, start_loop=start_loop)
 
         Fill_Identification_Number(driver=driver, identification_number=identification_number)
 
