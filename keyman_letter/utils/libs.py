@@ -101,7 +101,7 @@ def setVariables(max_delay_time, total_page, list_classname, rows_classname, dri
 
 def exportExcel(data_set):
     row_num = 0
-    with xlsxwriter.Workbook('../outputs/output.xlsx') as workbook:
+    with xlsxwriter.Workbook('./outputs/output.xlsx') as workbook:
         worksheet = workbook.add_worksheet()
         worksheet.write_row(row_num, 0, ['No', 'Company Name', 'Tags', 'Headline'])
         row_num += 1
