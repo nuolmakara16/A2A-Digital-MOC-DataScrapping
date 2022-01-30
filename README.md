@@ -7,7 +7,7 @@
 The idea of this project is to govern or gather information and data from various website to serve marketing purpose
 
 ## Requirements
-1. [Anaconda](https://nodejs.org/)
+1. [Anaconda](https://www.anaconda.com/products/individual)
 2. [Google chrome driver](https://chromedriver.chromium.org/downloads)
 
 ## Steps to run this on your local
