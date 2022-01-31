@@ -4,12 +4,12 @@ import re
 import xlsxwriter
 
 # Read data from this sheet
-workbook = xlrd.open_workbook('18238_35760.xlsx')
+workbook = xlrd.open_workbook('to_be_clean.xlsx')
 # workbook = load_workbook(filename = "1_33000.xlsx", read_only=True)
 worksheet = workbook.sheet_by_name('main_data')
 # worksheet = workbook['Sheet1']
 # Create new file
-outWorkbook = xlsxwriter.Workbook("Data_cleaning_18238_35760.xlsx")
+outWorkbook = xlsxwriter.Workbook("cleaned_file.xlsx")
 
 # create sheet name called T_business_categories
 outSheet_raw_data = outWorkbook.add_worksheet("Raw Data")

@@ -17,3 +17,8 @@ The idea of this project is to govern or gather information and data from variou
 4. Navigate to the project you want to run `cd MOC || cd keyman_letter`
 5. Install dependencies `pip install -r requirements.txt`
 6. Run the project `python index.py`
+
+## Using docker
+```bash
+$ docker-compose up -d --build
+```
