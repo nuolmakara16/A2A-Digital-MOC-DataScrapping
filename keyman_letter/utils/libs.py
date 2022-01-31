@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 MAXIMUM_DELAY_TIME = 0
 TOTAL_PAGE = 0
@@ -13,6 +14,7 @@ ROWS_CLASSNAME = ''
 DRIVER_PATH = ''
 ROWS = []
 MINIMIZE = True
+DOCKER = False
 
 def closeBanner(DRIVER):
     global MAXIMUM_DELAY_TIME
@@ -72,25 +74,35 @@ def findDataRows(DRIVER, PAGE_NO):
 
 def scrapFirstPage():
     global DRIVER_PATH
-    driver = webdriver.Chrome(executable_path=DRIVER_PATH)
+    global DOCKER
+
+    if DOCKER:
+        driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub', desired_capabilities=DesiredCapabilities.CHROME)
+    else:
+        driver = webdriver.Chrome(executable_path=DRIVER_PATH)
+
     findDataRows(DRIVER=driver, PAGE_NO=1)
     driver.quit()
 
 
 def scrapRemainingPage():
     global DRIVER_PATH
-    driver = webdriver.Chrome(executable_path=DRIVER_PATH)
+    if DOCKER:
+        driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub', desired_capabilities=DesiredCapabilities.CHROME)
+    else:
+        driver = webdriver.Chrome(executable_path=DRIVER_PATH)
     findDataRows(DRIVER=driver, PAGE_NO=2)
     driver.quit()
 
 
-def setVariables(max_delay_time, total_page, list_classname, rows_classname, driver_path, minimize_windows):
+def setVariables(max_delay_time, total_page, list_classname, rows_classname, driver_path, minimize_windows, docker):
     global MAXIMUM_DELAY_TIME
     global TOTAL_PAGE
     global LIST_CLASSNAME
     global ROWS_CLASSNAME
     global DRIVER_PATH
     global MINIMIZE
+    global DOCKER
 
     MAXIMUM_DELAY_TIME = max_delay_time
     TOTAL_PAGE = total_page
@@ -98,6 +110,7 @@ def setVariables(max_delay_time, total_page, list_classname, rows_classname, dri
     ROWS_CLASSNAME = rows_classname
     DRIVER_PATH = driver_path
     MINIMIZE = minimize_windows
+    DOCKER = docker
 
 def exportExcel(data_set):
     row_num = 0

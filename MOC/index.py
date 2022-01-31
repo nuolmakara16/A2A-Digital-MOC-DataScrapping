@@ -5,6 +5,7 @@ import xlsxwriter
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 from datetime import datetime
 
@@ -65,9 +66,8 @@ list_chairman_of_the_board_of_directors = []
 company_ids = []
 
 # Start and Ending number for the program to run
-start_at = 1000
-stop_at = 2000
-
+start_at = 100
+stop_at = 200
 
 hasData = True
 delay = 20
@@ -78,7 +78,11 @@ data = ["%.8d" % i for i in range(start_at, stop_at)]
 outWorkbook = xlsxwriter.Workbook(f"outputs/{start_at}-{stop_at}.xlsx")
 outSheet = outWorkbook.add_worksheet()
 
-driver = webdriver.Chrome('../drivers/chromedriver.exe')
+# Use docker selenium chrome driver
+driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub', desired_capabilities=DesiredCapabilities.CHROME)
+
+# Use local chrome driver
+# driver = webdriver.Chrome('../drivers/chromedriver.exe')
 
 
 def check_element(value):
