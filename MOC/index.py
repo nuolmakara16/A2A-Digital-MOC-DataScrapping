@@ -1,29 +1,32 @@
-from selenium import webdriver
-from time import sleep
-import xlsxwriter
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import threading
 import time
 from datetime import datetime
-from utils._style import *
-import threading
+from time import sleep
 
+import xlsxwriter
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+from utils._style import *
+
+''' ------------------------ BLOCK FOR MODIFYING ---------------------------------- '''
 # Start and Ending number for the program to run
-start_at = 100
-stop_at = 200
+start_at = 0
+stop_at = 10
+
 # Use docker selenium chrome driver
-driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub', desired_capabilities=DesiredCapabilities.CHROME)
+driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub',
+                          desired_capabilities=DesiredCapabilities.CHROME)
 
 # Use local chrome driver
 # driver = webdriver.Chrome('../drivers/chromedriver.exe')
+''' ----------------------------------------------------------------------------- '''
 
-# Get ID from Json file by using panda
 start_time = time.time()
-
 # Declare variable
-
 # General_details
 company_name_khs = []
 company_name_ens = []

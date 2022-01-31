@@ -20,11 +20,9 @@ $ docker-compose up -d --build
 ## Setup python environment
 1. Create new conda environment `conda create --name py36 python=3.6`
 2. Activate env `conda activate py36`
-3. Navigate to the project you want to run `cd MOC || cd keyman_letter`
-4. Install dependencies `pip install -r requirements.txt`
-5. Run the project `python index.py`
+3. Install dependencies `pip install -r requirements.txt`
 
-### How to run Keyman Letters Project
+### 1. How to run Keyman Letters Project
 ````pycon
     libs.setVariables(
         # Change docker option to True if you use docker-compose up
@@ -36,7 +34,7 @@ $ cd keyman_letter
 $ python index.py
 ```
 
-### How to run Keyman Letters Project
+### 2. How to run Keyman Letters Project
 ```bash
 $ cd MOC
 $ python index.py
