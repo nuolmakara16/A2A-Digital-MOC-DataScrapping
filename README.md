@@ -25,8 +25,8 @@ $ docker-compose up -d --build
 ### 1. How to run Keyman Letters Project
 ````pycon
     libs.setVariables(
-        # Change docker option to True if you use docker-compose up
-        docker=True,  # Change to True if want to use docker
+        # Change docker option to True if you use docker
+        docker=True,
     )
 ````
 ```bash
