@@ -5,7 +5,7 @@ def main():
         max_delay_time=20,  # No need to change this
         total_page=2,  # Need to change based on the number of pagination
         list_classname='list',
-        rows_classname='jss166',
+        rows_classname='jss168',
         minimize_windows=False,
         driver_path='../drivers/chromedriver.exe',  # No need to change this path 97.0.42
         docker=False,  # Change to True if want to use docker

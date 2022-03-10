@@ -44,6 +44,7 @@ def appendData(DRIVER):
                 'tag': '',
                 'desc': desc
             })
+    print(ROWS)
 
 
 def findDataRows(DRIVER, PAGE_NO):
@@ -70,6 +71,7 @@ def findDataRows(DRIVER, PAGE_NO):
                 WebDriverWait(DRIVER, MAXIMUM_DELAY_TIME).until(element).click()
     else:
         appendData(DRIVER=DRIVER)
+    print()
 
 
 def scrapFirstPage():
