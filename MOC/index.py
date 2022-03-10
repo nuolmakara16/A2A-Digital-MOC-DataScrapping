@@ -18,11 +18,11 @@ start_at = 0
 stop_at = 10
 
 # Use docker selenium chrome driver
-driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub',
-                          desired_capabilities=DesiredCapabilities.CHROME)
+# driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub',
+#                           desired_capabilities=DesiredCapabilities.CHROME)
 
 # Use local chrome driver
-# driver = webdriver.Chrome('../drivers/chromedriver.exe')
+driver = webdriver.Chrome('../drivers/chromedriver.exe')
 ''' ----------------------------------------------------------------------------- '''
 
 start_time = time.time()
