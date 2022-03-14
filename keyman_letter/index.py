@@ -8,7 +8,7 @@ def main():
         rows_classname='jss168',
         minimize_windows=False,
         driver_path='../drivers/chromedriver.exe',  # No need to change this path 97.0.42
-        docker=False,  # Change to True if want to use docker
+        docker=False,  # Change to True if you want to use docker
     )
     libs.scrapFirstPage()
     libs.scrapRemainingPage()

@@ -15,7 +15,7 @@ from utils._style import *
 ''' ------------------------ BLOCK FOR MODIFYING ---------------------------------- '''
 # Start and Ending number for the program to run
 start_at = 0
-stop_at = 10
+stop_at = 99999999
 
 # Use docker selenium chrome driver
 # driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub',
